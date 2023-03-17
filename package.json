@@ -1,0 +1,20 @@
+{
+  "name": "auth0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.j"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.4"
+  }
+}
