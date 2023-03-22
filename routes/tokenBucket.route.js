@@ -5,7 +5,7 @@ const router = express.Router();
 const takeRequestValidator = require('../middlewares/take.validator.js');
 
 // Controllers
-const TakeController = require('../controllers/take.controller');
+const TakeController = require('../controllers/tokenBucket.controller');
 
 const tokenController = new TakeController();
 

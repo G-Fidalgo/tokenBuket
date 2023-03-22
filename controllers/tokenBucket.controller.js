@@ -34,12 +34,12 @@ class TakeController {
             endpoint
         );
         if (!takenInfo) {
-            res.status(200).send({
+            return res.status(200).send({
                 message: 'KO',
                 reamainingTokens: 0,
             });
         } else {
-            res.status(200).send({
+            return res.status(200).send({
                 message: 'OK',
                 reamainingTokens: takenInfo,
             });
