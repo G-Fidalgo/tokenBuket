@@ -1,20 +1,28 @@
 {
-  "name": "auth0",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "start": "node main.js",
-    "dev": "nodemon main.j"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^2.0.21"
-  },
-  "devDependencies": {
-    "eslint": "^8.36.0",
-    "prettier": "^2.8.4"
-  }
+    "name": "token-bucket",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "node ./bin/www",
+        "dev": "nodemon ./bin/www",
+        "test": "nyc _mocha --timeout 10000 --exit --report lcovonly -- -R spec",
+        "lint": "eslint --fix --config .eslintrc.json \"**/*.js\""
+    },
+    "author": "G-Fidalgo",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "eslint": "^8.36.0",
+        "mocha": "^10.2.0",
+        "nodemon": "^2.0.21",
+        "nyc": "^14.1.1",
+        "prettier": "^2.8.4"
+    }
 }
