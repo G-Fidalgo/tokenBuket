@@ -5,7 +5,8 @@
     "scripts": {
         "start": "node ./bin/www",
         "dev": "nodemon ./bin/www",
-        "test": "nyc _mocha --timeout 10000 --exit --report lcovonly -- -R spec",
+        "test": "mocha --recursive",
+        "report": "nyc _mocha --timeout 10000 --exit --report lcovonly -- --recursive",
         "lint": "eslint --fix --config .eslintrc.json \"**/*.js\""
     },
     "author": "G-Fidalgo",
