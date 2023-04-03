@@ -15,16 +15,17 @@ class TokenBucket {
 
     addTokens() {
         Object.keys(this.endpointsHash).forEach((endpoint) => {
-            const capacityAdded = (
-                this.endpointsHash[endpoint].sustained / 1000
-            ).toFixed(6);
+            const capacityAdded = parseFloat(
+                (this.endpointsHash[endpoint].sustained / 60000).toFixed(6)
+            );
             Object.keys(callersDb).forEach((caller) => {
                 if (
-                    callersDb[caller][endpoint]?.capacity <
+                    parseFloat(callersDb[caller][endpoint]?.capacity) <
                     this.endpointsHash[endpoint].burst
                 ) {
                     const callerCapacityAdded =
-                        callersDb[caller][endpoint].capacity + capacityAdded;
+                        parseFloat(callersDb[caller][endpoint].capacity) +
+                        parseFloat(capacityAdded);
                     if (
                         callerCapacityAdded >=
                         this.endpointsHash[endpoint].burst
